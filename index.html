@@ -65,20 +65,6 @@ footer{text-align:center;color:#64748b;padding:10px 16px 30px;font-size:12px}
 </form>
 </section>
 
-<section class="card" id="owner-login">
-<h2>मालिक लॉगिन</h2>
-<p class="note">केवल TPL मालिक के लिए। लॉगिन आईडी: <strong>TPLOWNER2026</strong></p>
-<form id="ownerForm">
-<label for="ownerId">मालिक लॉगिन आईडी</label>
-<input id="ownerId" value="TPLOWNER2026" autocomplete="username" required>
-<label for="ownerPassword">पासवर्ड</label>
-<input id="ownerPassword" type="password" placeholder="अपना पासवर्ड दर्ज करें" autocomplete="current-password" required>
-<button type="submit">लॉगिन करें</button>
-<div class="result" id="ownerResult" role="status"></div>
-</form>
-<p class="note">सुरक्षा सूचना: यह केवल लॉगिन स्क्रीन का डेमो है। अभी असली पासवर्ड सत्यापन, मालिक डैशबोर्ड या निजी रिकॉर्ड देखने की सुविधा सक्रिय नहीं है। सुरक्षित लॉगिन के लिए सर्वर-साइड प्रमाणीकरण और नियंत्रित दस्तावेज़ स्टोरेज जोड़ना होगा। अपना पासवर्ड इस डेमो में या चैट में साझा न करें।</p>
-</section>
-
 <section class="card">
 <h2>पंजीकरण सहायता</h2>
 <p>पंजीकरण शुल्क: <strong>₹200</strong></p>
@@ -97,12 +83,7 @@ age.addEventListener('change', () => {
   document.getElementById('consent').required = minor;
 });
 
-document.getElementById('ownerForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const result = document.getElementById('ownerResult');
-  result.style.display = 'block';
-  result.textContent = 'यह डेमो लॉगिन है; अभी सर्वर पर पासवर्ड सत्यापन चालू नहीं है। असली Owner Login के लिए सुरक्षित बैकएंड सेटअप आवश्यक है।';
-});
+
 
 document.getElementById('regForm').addEventListener('submit', e => {
   e.preventDefault();
